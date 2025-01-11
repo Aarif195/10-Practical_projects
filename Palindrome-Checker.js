@@ -13,13 +13,13 @@ function plaindromeCheker() {
   const result = document.getElementById("result");
 
   if (isPlaindrome(inputText.value)) {
-    result.textContent = `"${inputText.value}" is a Plalindrome`;
+    result.textContent = `"${inputText.value}" is a Palindrome`;
   } else {
-    result.textContent = `"${inputText.value}" is a Plalindrome`;
+    result.textContent = `"${inputText.value}" is not a Palindrome`;
   }
 
   result.classList.add("fadein");
-  inputText.value = '';
+  inputText.value = "";
 }
 
 document

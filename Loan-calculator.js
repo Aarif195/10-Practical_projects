@@ -20,7 +20,7 @@ function calculator() {
     (1 - Math.pow(1 + monthlyInterest, -totalPayment));
   const totalInterest = monthlyPayment * totalPayment - loanAmount;
 
-  displayResult(monthlyPayment,totalInterest);
+  displayResult(monthlyPayment, totalInterest);
 }
 
 function displayResult(monthlyPayment, totalInterest) {
