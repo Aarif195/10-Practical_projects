@@ -7,7 +7,6 @@ const blueValueSpan = document.getElementById("blueValue");
 const greenValueSpan = document.getElementById("greenValue");
 
 const colorBox = document.getElementById("color-box");
-
 const copyButton = document.getElementById("copyButton");
 const inputTypeRGBValue = document.getElementById("inputType");
 
@@ -26,11 +25,27 @@ function updateColor() {
 
   colorBox.style.backgroundColor = rgbColor;
 
-  // redValueSpan.textContent = redValue;
-  // blueValueSpan.textContent = blueValue;
-  // greenValueSpan.textContent = greenValue;
+  redValueSpan.textContent = redValue;
+  blueValueSpan.textContent = blueValue;
+  greenValueSpan.textContent = greenValue;
+
+  inputTypeRGBValue.textContent = rgbColor;
 }
 
 updateColor();
 
-function copyRGBValue() {}
+function copyRGBValue() {
+  const redValue = redSlider.value;
+  const greenValue = greenSlider.value;
+  const blueValue = blueSlider.value;
+
+  const rgbColor = `rgb(${redValue},${greenValue},${blueValue})`;
+
+  navigator.clipboard.writeText(rgbColor)
+    .then(() => {
+    alert("RGB Color Value copied to the Clipboard:" + rgbColor)
+    })
+    .catch((error => {
+    console.error("Failed to copy RGB Values", error)
+  }))
+}
