@@ -77,14 +77,14 @@ button {
 
 @media (max-width: 768px) {
   .container {
-    width: 300px;
+    width: 280px;
   }
   label {
     margin-bottom: 15px;
     text-align: center;
-
   }
   h1 {
     margin-bottom: 10px;
   }
+ 
 }

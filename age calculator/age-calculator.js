@@ -9,7 +9,6 @@ function calculateAge() {
 
   console.log(birthdateInput, birthdateParts);
 
-  console.log(birthDate);
   
 
   const isValidDate = (date) => {
