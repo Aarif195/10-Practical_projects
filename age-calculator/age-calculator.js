@@ -8,8 +8,7 @@ function calculateAge() {
   const birthDate = new Date(birthYear, birthMonth, birthDay);
 
   console.log(birthdateInput, birthdateParts);
-
-  
+  console.log(birthDate);
 
   const isValidDate = (date) => {
     return (
@@ -24,6 +23,12 @@ function calculateAge() {
     return;
   }
 
+  if (birthdateParts[0] > 31 || birthdateParts[1] > 12) {
+    alert(
+      "Invalid Date Deatils"
+    );
+  }
+
   const ageInMilliSeconds = today - birthDate;
   const ageInSeconds = Math.floor(ageInMilliSeconds / 1000);
   const ageInMinutes = Math.floor(ageInSeconds / 60);
@@ -35,7 +40,6 @@ function calculateAge() {
 
   const resultContainer = document.getElementById("resultcontainer");
   const result = document.getElementById("result");
-
 
   result.innerHTML = `
   <div class="result-item">
