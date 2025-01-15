@@ -89,3 +89,10 @@ h1 {
 #CalculateBtn:hover {
   background-color: #53031b;
 }
+
+
+@media(max-width:768px){
+body {
+  padding: 1rem;
+}
+}

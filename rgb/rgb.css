@@ -8,6 +8,7 @@
 body {
   background: linear-gradient(to right, #4e54c8, #8f94fb);
 }
+
 .container {
   display: flex;
   flex-direction: column;
@@ -87,15 +88,14 @@ button {
   width: 180px;
 }
 
-/* const redValue = redSlider.value;
-    const greenValue = greenSlider.value;
-  const blueValue = blueSlider.value;
-  console.log(redValue, greenValue);
-  
-  const rbgColor = `rgb(${redValue}, ${greenValue}, ${blueValue})`;
-  navigator.clipboard.writeText(rbgColor)
-    .then(() => {
-    alert("RGB Color Value coped to Clipboard:" + rbgColor)
-    }).catch((error) => {
-    console.error("Failed to copy RGB Values", error);
-  }) */
+@media (max-width: 768px) {
+  .color-box {
+    width: 340px;
+  }
+ body {
+  padding: .3rem;
+ }
+ .container {
+  max-width: 400px;
+ }
+}

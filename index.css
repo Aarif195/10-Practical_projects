@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+
+  background-color: hsl(212, 45%, 89%);
+  font-family: "Outfit", serif;
+  padding: 1rem 0;
+}
+.container {
+  max-width: 900px;
+  margin: auto auto;
+}
+a {
+  text-decoration: none;
+  /* color: white; */
+}
+h1 {
+  color: black;
+  cursor: pointer;
+  text-align: center;
+}
+
+.box-container {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  gap: 0.3rem;
+}
+
+.box-container > *:last-child {
+  grid-column: 1 / span 3;
+  text-align: center;
+}
+
+.box-container > *:last-child button {
+  top: 57%;
+  left: 45%;
+}
+
+.box {
+  height: 300px;
+  border-radius: 5px;
+  /* border: 2px solid green; */
+  padding: 0.7rem;
+  position: relative;
+}
+
+img {
+  width: 270px;
+  height: 200px;
+  object-fit: contain;
+}
+a, i {
+  color: white;
+}
+
+h3 {
+  margin-top: 20px;
+}
+
+p {
+  margin-top: 5px;
+}
+
+button {
+  position: absolute;
+  top: 55%;
+  left: 35%;
+  padding: 0.7rem;
+  border: 1px solid #fff;
+  border-radius: 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: hsl(218, 44%, 22%);
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  background: linear-gradient(135deg, hsl(213, 22%, 65%), #4b4b97);
+  transform: scale(1.05);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+/*  MOBILE DESIGN*/
+@media (max-width: 768px) {
+  .container {
+    text-align: center;
+    padding: 1rem;
+  }
+
+  button {
+    left: 38%;
+  }
+
+  .box-container {
+    grid-template-columns: 1fr;
+  }
+
+  .box-container > *:last-child {
+    grid-column: 1;
+  }
+
+  .box-container > *:last-child button {
+    top: 57%;
+    left: 38%;
+  }
+}

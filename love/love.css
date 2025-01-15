@@ -59,3 +59,9 @@ button {
   font-size: 22px;
   color: #ff85c0;
 }
+
+@media(max-width:768px) {
+body {
+  padding: 1rem;
+}
+}
